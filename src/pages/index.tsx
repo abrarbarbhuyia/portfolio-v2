@@ -1,6 +1,5 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
 
 const Home: NextPage = () => {
@@ -34,10 +33,10 @@ const Home: NextPage = () => {
                   Devops Engineering
                 </span>{" "}
                 and the mindset to deliver high-quality code and robust
-                applications.
+                applications that go beyond expectations.
               </div>
             </div>
-            <div className="ml-8 flex flex-col items-center justify-center">
+            <div className="flex items-center justify-center mt-8 md:mt-0 md:ml-8 md:mr-8">
               <div className="overflow-hidden rounded-full border-4 border-yellow-300">
                 <Image
                   src="/images/me.jpg"

@@ -1,5 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
 
 const Home: NextPage = () => {
@@ -12,31 +13,33 @@ const Home: NextPage = () => {
       </Head>
       <main className="flex h-screen justify-center bg-neutral-200">
         <div className="mx-auto flex h-full w-full max-w-7xl justify-center px-4">
-          <div className="flex flex-row  flex-wrap-reverse justify-center">
-            <div className="flex max-w-md md:max-w-3xl flex-col justify-center pr-10">
-              <div className="text-5xl font-light">Hello!👋</div>
-              <div className="text-6xl font-bold">
+          <div className="flex flex-row flex-wrap-reverse justify-center">
+            <div className="flex max-w-3xl flex-col justify-center pr-10">
+              <div className="text-3xl font-light md:text-5xl">Hello!👋</div>
+              <div className="text-4xl font-bold md:text-6xl">
                 My name is <span className="text-yellow-500">Abrar</span>
               </div>
-              <div className="mt-6 text-lg leading-8">
-                I'm a Full-Stack Developer who aspires to create exceptional
-                products.
-              </div>
-              <div className="mt-6 text-lg leading-8">
-                With my studies at UTS in conjunction with my work experience of
-                over a year, I have gained strong fundamentals in{" "}
-                <span className="font-bold text-green-500">
-                  Full-Stack Development
-                </span>{" "}
-                and{" "}
-                <span className="font-bold text-blue-700">
-                  Devops Engineering
-                </span>{" "}
-                and the mindset to deliver high-quality code and robust
-                applications that go beyond expectations.
+              <div className="font-light">
+                <div className="mt-6 text-sm leading-8 md:text-lg">
+                  I&apos;m a Full-Stack Developer who aspires to create
+                  exceptional products.
+                </div>
+                <div className="mt-6 text-sm leading-8 md:text-lg">
+                  With my studies at UTS in conjunction with my work experience
+                  of over a year, I have gained strong fundamentals in{" "}
+                  <span className="font-bold text-green-500">
+                    Full-Stack Development
+                  </span>{" "}
+                  and{" "}
+                  <span className="font-bold text-blue-700">
+                    Devops Engineering
+                  </span>{" "}
+                  and the mindset to deliver high-quality code and robust
+                  applications that go beyond expectations.
+                </div>
               </div>
             </div>
-            <div className="flex items-center justify-center mt-8 md:mt-0 md:ml-8 md:mr-8">
+            <div className="flex flex-col items-center justify-center md:max-h-64 md:max-w-64">
               <div className="overflow-hidden rounded-full border-4 border-yellow-300">
                 <Image
                   src="/images/me.jpg"

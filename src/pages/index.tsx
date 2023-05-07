@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <main className="flex h-screen justify-center bg-neutral-200">
         <div className="mx-auto flex h-full w-full max-w-7xl justify-center px-4">
           <div className="flex flex-row flex-wrap-reverse justify-center">
-            <div className="flex max-w-3xl flex-col justify-top md:justify-center md:pr-10 text-center md:text-left">
+            <div className="justify-top flex max-w-3xl flex-col text-center md:justify-center md:pr-10 md:text-left">
               <div className="text-3xl font-light md:text-5xl">Hello!👋</div>
               <div className="text-4xl font-bold md:text-6xl">
                 My name is <span className="text-yellow-500">Abrar</span>
@@ -41,13 +41,12 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div className="flex flex-col items-center justify-center">
-              <div className="overflow-hidden rounded-full border-4 border-yellow-300">
+              <div className="max-h-full max-w-full overflow-hidden rounded-full border-4 border-yellow-300">
                 <Image
                   src="/images/me.jpg"
                   alt="Abrar Barbhuyia"
                   width={440}
                   height={440}
-                  className="h-64 w-64 md:h-full md:w-full"
                 />
               </div>
             </div>

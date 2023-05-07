@@ -14,7 +14,7 @@ const Home: NextPage = () => {
       <main className="flex h-screen justify-center bg-neutral-200">
         <div className="mx-auto flex h-full w-full max-w-7xl justify-center px-4">
           <div className="flex flex-row flex-wrap-reverse justify-center">
-            <div className="flex max-w-3xl flex-col justify-center pr-10">
+            <div className="flex max-w-3xl flex-col justify-top md:justify-center md:pr-10 text-center md:text-left">
               <div className="text-3xl font-light md:text-5xl">Hello!👋</div>
               <div className="text-4xl font-bold md:text-6xl">
                 My name is <span className="text-yellow-500">Abrar</span>

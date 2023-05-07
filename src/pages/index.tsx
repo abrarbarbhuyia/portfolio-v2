@@ -20,13 +20,14 @@ const Home: NextPage = () => {
                 My name is <span className="text-yellow-500">Abrar</span>
               </div>
               <div className="font-light">
-                <div className="mt-6 text-sm leading-8 md:text-lg">
+                <div className="text-s mt-6 leading-8 md:text-lg">
                   I&apos;m a Full-Stack Developer who aspires to create
                   exceptional products.
                 </div>
-                <div className="mt-6 text-sm leading-8 md:text-lg">
-                  With my studies at UTS in conjunction with my work experience
-                  of over a year, I have gained strong fundamentals in{" "}
+                <div className="text-s mt-6 leading-8 md:text-lg">
+                  Throught the process of my studies at UTS, in conjunction with
+                  my work experience of over a year, I have gained strong
+                  fundamentals in{" "}
                   <span className="font-bold text-green-500">
                     Full-Stack Development
                   </span>{" "}
@@ -39,13 +40,14 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col items-center justify-center md:max-h-64 md:max-w-64">
+            <div className="flex flex-col items-center justify-center">
               <div className="overflow-hidden rounded-full border-4 border-yellow-300">
                 <Image
                   src="/images/me.jpg"
                   alt="Abrar Barbhuyia"
                   width={440}
                   height={440}
+                  className="h-64 w-64 md:h-full md:w-full"
                 />
               </div>
             </div>

@@ -2,6 +2,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import Header from "sections/header";
 
 const Home: NextPage = () => {
   return (
@@ -12,46 +13,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex h-screen justify-center bg-neutral-200">
-        <div className="mx-auto flex h-full w-full max-w-7xl justify-center px-4">
-          <div className="flex flex-row flex-wrap-reverse justify-center">
-            <div className="justify-top flex max-w-3xl flex-col text-center md:justify-center md:pr-10 md:text-left">
-              <div className="text-3xl font-light md:text-5xl">Hello!👋</div>
-              <div className="text-4xl font-bold md:text-6xl">
-                My name is <span className="text-yellow-500">Abrar</span>
-              </div>
-              <div className="font-light">
-                <div className="text-s mt-6 leading-8 md:text-lg">
-                  I&apos;m a Full-Stack Developer who aspires to create
-                  exceptional products.
-                </div>
-                <div className="text-s mt-6 leading-8 md:text-lg">
-                  Throught the process of my studies at UTS, in conjunction with
-                  my work experience of over a year, I have gained strong
-                  fundamentals in{" "}
-                  <span className="font-bold text-green-500">
-                    Full-Stack Development
-                  </span>{" "}
-                  and{" "}
-                  <span className="font-bold text-blue-700">
-                    Devops Engineering
-                  </span>{" "}
-                  and the mindset to deliver high-quality code and robust
-                  applications that go beyond expectations.
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <div className="max-h-full max-w-full overflow-hidden rounded-full border-4 border-yellow-300">
-                <Image
-                  src="/images/me.jpg"
-                  alt="Abrar Barbhuyia"
-                  width={440}
-                  height={440}
-                  className="h-60 w-60 md:h-96 md:w-96"
-                />
-              </div>
-            </div>
-          </div>
+        <div className="mx-auto flex h-full w-full max-w-7xl flex-col justify-center px-4">
+          <Header />
         </div>
       </main>
     </>

@@ -2,7 +2,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import Header from "sections/header"
+import Header from "../components/Header"
 
 const Home: NextPage = () => {
   return (

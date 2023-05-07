@@ -47,6 +47,7 @@ const Home: NextPage = () => {
                   alt="Abrar Barbhuyia"
                   width={440}
                   height={440}
+                  className="h-60 w-60 md:h-96 md:w-96"
                 />
               </div>
             </div>

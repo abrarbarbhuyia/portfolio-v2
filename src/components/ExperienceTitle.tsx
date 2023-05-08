@@ -6,7 +6,7 @@ const ExperienceTitle = () => {
         </h2>
         <div className="md:border-b-2 md:border-white md:mb-6"></div>
         <p className="font-bold text-xl md:text-2xl text-white">
-          Experience in Industry and Volunteering
+          Experience in Industry
         </p>
       </div>
     );

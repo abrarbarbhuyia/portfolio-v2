@@ -44,7 +44,7 @@ const Experience = () => {
       employmentPeriod: "November 2022 - Present",
       companyName: "Optus",
       jobTitle: "Software Engineering Intern",
-      jobDescription: "My main responsibilities included Full Stack Development and DevOps Engineering, with the aim of creating automation tools that assist external teams in their day-to-day work. Some of things I am currently working on is managing, deploying and maintaining kubernetes clusters and applications, as well as creating CI/CD piplines for deployment and monitoring of applications and key network nodes all with a focus on scalability and reliability. I learned a lot about the importance of automation and how it can be used to improve the efficiency of teams.",
+      jobDescription: "My main responsibilities included Full Stack Development and DevOps Engineering, with the aim of creating automation tools that assist external teams in their day-to-day work. Some of things I am currently working on is managing, deploying and maintaining kubernetes clusters and applications, as well as creating CI/CD piplines for deployment and monitoring of applications and key network nodes all with a focus on scalability and reliability. I've learnt a lot about the importance of automation and how it can be used to improve the efficiency of teams.",
       skills: ["Kubernetes", "ArgoCD", "Rancher", "Gitlab CI/CD", "Harbor", "Ansible", "YAML", "Python", "Grafana", "Linux", "Jira", "Confluence"],
     },
     {

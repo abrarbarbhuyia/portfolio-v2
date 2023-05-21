@@ -5,6 +5,7 @@ import Image from "next/image";
 import Header from "../components/Header"
 import Experience from "../components/Experience"
 import ExperienceTitle from "~/components/ExperienceTitle";
+import EducationTitle from "~/components/Education";
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
           <Header />
           <ExperienceTitle />
           <Experience />
+          <EducationTitle />
         </div>
       </main>
     </>

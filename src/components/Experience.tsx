@@ -7,6 +7,7 @@ import Image from "next/image";
 interface CompanyExperienceProps {
   employmentPeriod: string;
   companyName: string;
+  companyUrl: string;
   companyPicture: string;
   jobTitle: string;
   jobDescription: string[];
@@ -16,6 +17,7 @@ interface CompanyExperienceProps {
 const CompanyExperience = ({
   employmentPeriod,
   companyName,
+  companyUrl,
   companyPicture,
   jobTitle,
   jobDescription,
@@ -37,6 +39,10 @@ const CompanyExperience = ({
     },
   };
 
+  const logoVariants = {
+    hover: { scale: 1.2 }
+  };
+
   return (
     <FadeInWhenVisible>
       <motion.div
@@ -47,7 +53,15 @@ const CompanyExperience = ({
         ref={ref}
       >
         <div className="flex flex-row">
-          <div className="mr-4 self-center shadow-sm">
+          <motion.a
+            href={companyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mr-4 self-center shadow-sm"
+            whileHover="hover"
+            whileTap="tap"
+            variants={logoVariants}
+          >
             <Image
               src={companyPicture}
               alt="Company Logo"
@@ -55,7 +69,7 @@ const CompanyExperience = ({
               height={248}
               className="h-16 w-16 rounded-lg object-cover md:h-20 md:w-20"
             />
-          </div>
+          </motion.a>
           <div>
             <h2 className="text-lg font-bold text-gray-900 md:text-xl">
               {companyName}
@@ -97,6 +111,7 @@ const Experience = () => {
     {
       employmentPeriod: "November 2022 - Present",
       companyName: "Optus",
+      companyUrl: "https://www.optus.com.au/",
       companyPicture: "/images/optus.jpg",
       jobTitle: "Software Engineer Intern",
       jobDescription: [
@@ -123,6 +138,7 @@ const Experience = () => {
     {
       employmentPeriod: "July 2021 - December 2021",
       companyName: "Gecko.rent",
+      companyUrl: "https://gecko.rent/",
       companyPicture: "/images/gecko.jpeg",
       jobTitle: "Software Engineer Intern",
       jobDescription: [

@@ -20,8 +20,8 @@ const Header = () => {
               Full-Stack Development
             </span>{" "}
             and{" "}
-            <span className="font-bold text-blue-400">DevOps Engineering</span>{" "}
-            and the mindset to deliver high-quality code and robust applications
+            <span className="font-bold text-blue-400">DevOps Engineering.</span>{" "}
+            I have a strong focus to deliver high-quality code and robust applications
             that exceed expectations.
           </div>
         </div>

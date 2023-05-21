@@ -10,7 +10,7 @@ const Header = () => {
         </div>
         <div className="font-light">
           <div className="text-s mt-6 leading-8 md:text-lg">
-            I&apos;m an aspiring Full-Stack Developer, studying at UTS who aspires to create exceptional
+            I&apos;m a Full-Stack Developer studying at UTS who aspires to create exceptional
             products.
           </div>
           <div className="text-s mt-6 leading-8 md:text-lg">
@@ -20,7 +20,7 @@ const Header = () => {
               Full-Stack Development
             </span>{" "}
             and{" "}
-            <span className="font-bold text-blue-400">Devops Engineering</span>{" "}
+            <span className="font-bold text-blue-400">DevOps Engineering</span>{" "}
             and the mindset to deliver high-quality code and robust applications
             that exceed expectations.
           </div>

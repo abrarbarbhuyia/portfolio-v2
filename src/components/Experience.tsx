@@ -1,37 +1,64 @@
+import React from "react";
+import Image from "next/image";
+
 interface CompanyExperienceProps {
   employmentPeriod: string;
   companyName: string;
+  companyPicture: string;
   jobTitle: string;
-  jobDescription: string;
+  jobDescription: string[];
   skills: string[];
 }
 
 const CompanyExperience = ({
   employmentPeriod,
   companyName,
+  companyPicture,
   jobTitle,
   jobDescription,
   skills,
 }: CompanyExperienceProps) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg">
-      <div className="px-6 pt-8 md:py-8 md:flex md:justify-between md:items-center">
-        <div className="mb-4 md:mb-0">
-          <h2 className="text-2xl font-bold text-gray-900">{companyName}</h2>
-          <div className="text-lg font-semibold text-gray-500">{jobTitle}</div>
-          <div className="text-gray-500">{employmentPeriod}</div>
+    <div className="rounded-lg bg-white p-6 shadow-lg">
+      <div className="flex flex-row">
+        <div className="mr-4 self-center shadow-sm">
+          <Image
+            src={companyPicture}
+            alt="Abrar Barbhuyia"
+            width={248}
+            height={248}
+            className="h-16 w-16 rounded-lg object-cover md:h-20 md:w-20"
+          />
+        </div>
+        <div>
+          <h2 className="text-lg font-bold text-gray-900 md:text-xl">
+            {companyName}
+          </h2>
+          <div className="text-sm font-semibold text-gray-500 md:mt-0.5 md:text-base">
+            {jobTitle}
+          </div>
+          <div className="text-sm text-gray-500 md:mt-0.5 md:text-base">
+            {employmentPeriod}
+          </div>
         </div>
       </div>
-      <div className="px-6 pb-8">
-        <div className="text-gray-900 text-sm md:text-lg">{jobDescription}</div>
-        <div className="mt-4">
-          <div className="flex flex-wrap">
-            {skills.map((skill, index) => (
-              <div key={index} className="bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                {skill}
-              </div>
-            ))}
-          </div>
+      <ul className="mt-4 text-sm text-gray-900 md:text-base list-disc md:pl-6 space-y-2">
+        {jobDescription.map((point, index) => (
+          <li key={index} className="ml-4">
+            {point}
+          </li>
+        ))}
+      </ul>
+      <div className="mt-4">
+        <div className="flex flex-wrap">
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className="mb-2 mr-2 rounded-full bg-gray-200 px-3 py-1 text-xs font-semibold text-gray-700 md:text-sm"
+            >
+              {skill}
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -43,16 +70,41 @@ const Experience = () => {
     {
       employmentPeriod: "November 2022 - Present",
       companyName: "Optus",
-      jobTitle: "Software Engineering Intern",
-      jobDescription: "My main responsibilities included Full Stack Development and DevOps Engineering, with the aim of creating automation tools that assist external teams in their day-to-day work. Some of things I am currently working on is managing, deploying and maintaining kubernetes clusters and applications, as well as creating CI/CD piplines for deployment and monitoring of applications and key network nodes all with a focus on scalability and reliability. I've learnt a lot about the importance of automation and how it can be used to improve the efficiency of teams.",
-      skills: ["Kubernetes", "ArgoCD", "Rancher", "Gitlab CI/CD", "Harbor", "Ansible", "YAML", "Python", "Grafana", "Linux", "Jira", "Confluence"],
+      companyPicture: "/images/optus.jpg",
+      jobTitle: "Software Engineer Intern",
+      jobDescription: [
+        "Developed and maintained automation tools as containerised applications on a DevOps stack to improve scalability and ease management of the Core Network.",
+        "Engineered APIs to automate the running of shell commands on Core Network Nodes to enable alerting and improve visibility of network health.",
+        "Fixed a production Minio database to support a retention policy when faced with storage issues, resulting in over 600GB of space savings.",
+        "Spearheaded the deveolpment of an automatic proxy tool to enable remote engineers efficient access to lab elements that were previously unreachable."
+      ],
+      skills: [
+        "Kubernetes",
+        "ArgoCD",
+        "Rancher",
+        "Gitlab CI/CD",
+        "Harbor",
+        "Ansible",
+        "YAML",
+        "Python",
+        "Grafana",
+        "Linux",
+        "Jira",
+        "Confluence",
+      ],
     },
     {
       employmentPeriod: "July 2021 - December 2021",
       companyName: "Gecko.rent",
-      jobTitle: "Software Developer Intern",
-      jobDescription: "The work in this internship focused on creating a rental marketplace in a react-based web application. I was responsible for creating new features, fixing bugs and working with a customer-centric mentality to ensure that the product was always improving. I learned a lot of the fundamentals of web development and how to work in a team environment.",
-      skills: ["Javascript", "React", "GraphQL", "Docker", "Trello"],
+      companyPicture: "/images/gecko.jpeg",
+      jobTitle: "Software Engineer Intern",
+      jobDescription: [
+        "Worked to actively solve bugs and build new features for a high-growth rental marketplace within a React-based framework.",
+        "Architected back-end GraphQL queries to enable the development of new features in the front-end.",
+        "Integrated responsive user interfaces that boosted mobile traffic while liaising closely with the design team.",
+        "Redesigned the order confirmation page and assisted in the implementation of the sending of confirmation emails to increase customer trust."
+      ],
+      skills: ["JavaScript", "React", "GraphQL", "Docker", "Trello"],
     },
   ];
 

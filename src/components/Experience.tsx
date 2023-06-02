@@ -22,7 +22,7 @@ const CompanyExperience = ({
   skills,
 }: CompanyExperienceProps) => {
   const [ref, inView] = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.2,
   });
 
@@ -38,7 +38,6 @@ const CompanyExperience = ({
   };
 
   return (
-    <FadeInWhenVisible>
       <motion.div
         className="rounded-lg bg-white p-6 shadow-lg"
         variants={cardVariants}
@@ -88,7 +87,6 @@ const CompanyExperience = ({
           </div>
         </div>
       </motion.div>
-    </FadeInWhenVisible>
   );
 };
 

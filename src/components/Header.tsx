@@ -3,7 +3,7 @@ import Image from "next/image";
 const Header = () => {
   return (
     <div className="flex flex-row flex-wrap-reverse justify-center w-full min-h-screen">
-      <div className="justify-top flex max-w-3xl flex-col text-center md:justify-center md:pr-10 md:text-left">
+      <div className="justify-top flex max-w-2xl flex-col text-center md:justify-center md:pr-10 md:text-left">
         <div className="text-3xl font-light md:text-5xl">Hello!👋</div>
         <div className="text-4xl font-semibold md:text-6xl">
           My name is <span className="text-yellow-300">Abrar</span>

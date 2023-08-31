@@ -8,10 +8,23 @@ import {
   Typography,
   Button,
   Box,
-  Link, // Import Link component from Material-UI
-  // Import Box component from Material-UI
+  Link,
 } from "@mui/material";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa"; // Import icons
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
+// Define an interface for academic experiences
+interface AcademicExperience {
+  type: string;
+  university?: string;
+  degree?: string;
+  year?: string;
+  achievements?: string[];
+  involvement?: string[];
+  title?: string;
+  description?: string;
+  technologies?: string[];
+  githubLink?: string;
+}
 
 const AcademicExperience = () => {
   const { ref, inView } = useInView({
@@ -21,28 +34,31 @@ const AcademicExperience = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   // Define academic experience data (replace with your own)
-  const academicExperiences = [
+  const academicExperiences: AcademicExperience[] = [
     {
       type: "University Info",
       university: "University of Technology Sydney",
-      degree: "Bachelor of Software Engineering (Honours) Diploma in Professional Engineering Practice",
+      degree:
+        "Bachelor of Software Engineering (Honours) Diploma in Professional Engineering Practice",
       year: "2020 - Present",
       achievements: ["Dean's List, 2022", "Dean's List, 2023"],
-      involvement: ["UTS Peer Tutoring", "UTS Programming Society"]
+      involvement: ["UTS Peer Tutoring", "UTS Programming Society"],
     },
     {
       type: "Project",
       title: "PacStudent",
-      description: "A classic pacman clone, with handmade sprites and animation",
+      description:
+        "A classic pacman clone, with handmade sprites and animation",
       technologies: ["Unity", "C#"],
-      githubLink: "https://github.com/abrarbarbhuyia/pacman"
+      githubLink: "https://github.com/abrarbarbhuyia/pacman",
     },
     {
       type: "Project",
       title: "AI Proctor Tool",
-      description: "An AI-based proctoring tool for online exams, with face tracking and event detection.",
+      description:
+        "An AI-based proctoring tool for online exams, with face tracking and event detection.",
       technologies: ["TensorFlow", "Python", "MongoDB", "Machine Learning"],
-      githubLink: "https://github.com/ProgKorn/41127-Software-Design-Studio"
+      githubLink: "https://github.com/ProgKorn/41127-Software-Design-Studio",
     },
   ];
 
@@ -54,81 +70,120 @@ const AcademicExperience = () => {
     setActiveStep((prevStep) => prevStep + 1);
   };
 
+  // Now, you can type activeExperience using the AcademicExperience interface
+  const activeExperience: AcademicExperience = academicExperiences[
+    activeStep
+  ] || {
+    type: "",
+    university: "",
+    degree: "",
+    year: "",
+    achievements: [],
+    involvement: [],
+    title: "",
+    description: "",
+    technologies: [],
+    githubLink: "",
+  };
+
   return (
     <div ref={ref} className="m-8">
       <Box height="350px">
         <Paper elevation={3} className="p-5" style={{ height: "100%" }}>
-          {academicExperiences[activeStep].type === "University Info" ? (
+          {activeExperience.type === "University Info" ? (
             <>
-              <Typography variant="h6" className="text-lg font-bold text-gray-900 md:text-xl">
-                {academicExperiences[activeStep].university}
+              <Typography
+                variant="h6"
+                className="text-lg font-bold text-gray-900 md:text-xl"
+              >
+                {activeExperience.university}
               </Typography>
               <div className="text-sm font-semibold text-gray-500 md:mt-0.5 md:text-base">
-                {academicExperiences[activeStep].degree}
+                {activeExperience.degree}
               </div>
               <div className="text-sm text-gray-500 md:mt-0.5 md:text-base">
-                {academicExperiences[activeStep].year}
+                {activeExperience.year}
               </div>
-              {academicExperiences[activeStep].achievements.length > 0 && (
-                <div className="mt-4">
-                  <Typography variant="subtitle2" className="text-lg font-bold text-gray-900">
-                    Achievements:
-                  </Typography>
-                  <ul className="mt-2 list-disc space-y-2 text-sm text-gray-900 md:pl-6 md:text-base">
-                    {academicExperiences[activeStep].achievements.map(
-                      (achievement, index) => (
-                        <li key={index} className="ml-4">
-                          {achievement}
-                        </li>
-                      )
-                    )}
-                  </ul>
-                </div>
-              )}
-              {academicExperiences[activeStep].involvement.length > 0 && (
-                <div className="mt-4">
-                  <Typography variant="subtitle2" className="text-lg font-bold text-gray-900">
-                    Involvement:
-                  </Typography>
-                  <ul className="mt-2 list-disc space-y-2 text-sm text-gray-900 md:pl-6 md:text-base">
-                    {academicExperiences[activeStep].involvement.map(
-                      (involvement, index) => (
-                        <li key={index} className="ml-4">
-                          {involvement}
-                        </li>
-                      )
-                    )}
-                  </ul>
-                </div>
-              )}
+              {activeExperience.achievements &&
+                activeExperience.achievements.length > 0 && (
+                  <div className="mt-4">
+                    <Typography
+                      variant="subtitle2"
+                      className="text-lg font-bold text-gray-900"
+                    >
+                      Achievements:
+                    </Typography>
+                    <ul className="mt-2 list-disc space-y-2 text-sm text-gray-900 md:pl-6 md:text-base">
+                      {activeExperience.achievements.map(
+                        (achievement, index) => (
+                          <li key={index} className="ml-4">
+                            {achievement}
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  </div>
+                )}
+              {activeExperience.involvement &&
+                activeExperience.involvement.length > 0 && (
+                  <div className="mt-4">
+                    <Typography
+                      variant="subtitle2"
+                      className="text-lg font-bold text-gray-900"
+                    >
+                      Involvement:
+                    </Typography>
+                    <ul className="mt-2 list-disc space-y-2 text-sm text-gray-900 md:pl-6 md:text-base">
+                      {activeExperience.involvement.map(
+                        (involvement, index) => (
+                          <li key={index} className="ml-4">
+                            {involvement}
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  </div>
+                )}
             </>
           ) : (
             <div>
-              <Typography variant="h6" className="text-lg font-bold text-gray-900 md:text-xl">
-                {academicExperiences[activeStep].title}
+              <Typography
+                variant="h6"
+                className="text-lg font-bold text-gray-900 md:text-xl"
+              >
+                {activeExperience.title}
               </Typography>
               <Typography variant="body1" paragraph>
-                {academicExperiences[activeStep].description}
+                {activeExperience.description}
               </Typography>
-              <Typography variant="subtitle2" className="text-lg font-bold text-gray-900">
+              <Typography
+                variant="subtitle2"
+                className="text-lg font-bold text-gray-900"
+              >
                 Technologies Used:
               </Typography>
               <ul className="mt-2 list-disc space-y-2 text-sm text-gray-900 md:pl-6 md:text-base">
-                {academicExperiences[activeStep].technologies.map(
-                  (technology, index) => (
-                    <li key={index} className="ml-4">
-                      {technology}
-                    </li>
-                  )
-                )}
+                {activeExperience.technologies?.map((technology, index) => (
+                  <li key={index} className="ml-4">
+                    {technology}
+                  </li>
+                ))}
               </ul>
-              {academicExperiences[activeStep].githubLink && (
+              {activeExperience.githubLink && (
                 <div className="mt-4">
-                  <Typography variant="subtitle2" className="text-lg font-bold text-gray-900">
+                  <Typography
+                    variant="subtitle2"
+                    className="text-lg font-bold text-gray-900"
+                  >
                     GitHub Link:
                   </Typography>
-                  <Link href={academicExperiences[activeStep].githubLink} target="_blank" rel="noopener" className="text-blue-500">
-                    {academicExperiences[activeStep].githubLink}
+                  <Link
+                    href={activeExperience.githubLink}
+                    target="_blank"
+                    rel="noopener"
+                    className="text-blue-500"
+                  >
+                    {activeExperience.githubLink}
                   </Link>
                 </div>
               )}

@@ -23,10 +23,10 @@ const Home: NextPage = () => {
           <Header />
           <ExperienceTitle />
           <Experience />
-          <SkillsTitle />
-          <Skills />
           <AcademicExperienceTitle />
           <AcademicExperience />
+          <SkillsTitle />
+          <Skills />
         </div>
       </main>
     </>

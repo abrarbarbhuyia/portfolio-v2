@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { Paper, Typography, Button, Box, Link } from "@mui/material";
+import { Paper, Button, Box, Link } from "@mui/material";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 interface AcademicExperience {
@@ -76,12 +76,12 @@ const AcademicExperience = () => {
           <Paper elevation={3} className="p-5" style={{ height: "100%" }}>
             {activeExperience.type === "University Info" ? (
               <>
-                <Typography
+                <p
                   variant="h6"
                   className="text-lg font-bold text-gray-900 md:text-xl"
                 >
                   {activeExperience.university}
-                </Typography>
+                </p>
                 <div className="text-sm font-semibold text-gray-500 md:mt-0.5 md:text-base">
                   {activeExperience.degree}
                 </div>
@@ -91,12 +91,12 @@ const AcademicExperience = () => {
                 {activeExperience.achievements &&
                   activeExperience.achievements.length > 0 && (
                     <div className="mt-4">
-                      <Typography
+                      <p
                         variant="subtitle2"
                         className="text-lg font-bold text-gray-900"
                       >
                         Achievements:
-                      </Typography>
+                      </p>
                       <ul className="mt-2 list-disc space-y-2 text-sm text-gray-900 md:pl-6 md:text-base">
                         {activeExperience.achievements.map(
                           (achievement, index) => (
@@ -111,12 +111,12 @@ const AcademicExperience = () => {
                 {activeExperience.involvement &&
                   activeExperience.involvement.length > 0 && (
                     <div className="mt-4">
-                      <Typography
+                      <p
                         variant="subtitle2"
                         className="text-lg font-bold text-gray-900"
                       >
                         Involvement:
-                      </Typography>
+                      </p>
                       <ul className="mt-2 list-disc space-y-2 text-sm text-gray-900 md:pl-6 md:text-base">
                         {activeExperience.involvement.map(
                           (involvement, index) => (
@@ -131,21 +131,21 @@ const AcademicExperience = () => {
               </>
             ) : (
               <div>
-                <Typography
+                <p
                   variant="h6"
                   className="text-lg font-bold text-gray-900 md:text-xl"
                 >
                   {activeExperience.title}
-                </Typography>
-                <Typography variant="body1" paragraph>
+                </p>
+                <p variant="body1" paragraph>
                   {activeExperience.description}
-                </Typography>
-                <Typography
+                </p>
+                <p
                   variant="subtitle2"
                   className="text-lg font-bold text-gray-900"
                 >
                   Technologies Used:
-                </Typography>
+                </p>
                 <ul className="mt-2 list-disc space-y-2 text-sm text-gray-900 md:pl-6 md:text-base">
                   {activeExperience.technologies?.map((technology, index) => (
                     <li key={index} className="ml-4">
@@ -155,12 +155,12 @@ const AcademicExperience = () => {
                 </ul>
                 {activeExperience.githubLink && (
                   <div className="mt-4">
-                    <Typography
+                    <p
                       variant="subtitle2"
                       className="text-lg font-bold text-gray-900"
                     >
                       GitHub Link:
-                    </Typography>
+                    </p>
                     <Link
                       href={activeExperience.githubLink}
                       target="_blank"

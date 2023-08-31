@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import {
-  Stepper,
-  Step,
-  StepButton,
   Paper,
   Typography,
   Button,
@@ -12,7 +9,6 @@ import {
 } from "@mui/material";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-// Define an interface for academic experiences
 interface AcademicExperience {
   type: string;
   university?: string;
@@ -27,13 +23,12 @@ interface AcademicExperience {
 }
 
 const AcademicExperience = () => {
-  const { ref, inView } = useInView({
+  const { ref } = useInView({
     triggerOnce: true,
   });
 
   const [activeStep, setActiveStep] = useState(0);
 
-  // Define academic experience data (replace with your own)
   const academicExperiences: AcademicExperience[] = [
     {
       type: "University Info",
@@ -70,7 +65,6 @@ const AcademicExperience = () => {
     setActiveStep((prevStep) => prevStep + 1);
   };
 
-  // Now, you can type activeExperience using the AcademicExperience interface
   const activeExperience: AcademicExperience = academicExperiences[
     activeStep
   ] || {

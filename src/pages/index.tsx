@@ -5,6 +5,8 @@ import Image from "next/image";
 import Header from "../components/Header"
 import Experience from "../components/Experience"
 import ExperienceTitle from "~/components/ExperienceTitle";
+import AcademicExperienceTitle from "~/components/AcademicExperienceTitle";
+import AcademicExperience from "~/components/AcademicExperience";
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +21,8 @@ const Home: NextPage = () => {
           <Header />
           <ExperienceTitle />
           <Experience />
+          <AcademicExperienceTitle />
+          <AcademicExperience />
         </div>
       </main>
     </>

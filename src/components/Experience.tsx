@@ -100,22 +100,11 @@ const Experience = () => {
         "Developed and maintained automation tools as containerized applications on a DevOps stack to improve scalability and ease management of the Core Network.",
         "Engineered APIs to automate the running of shell commands on Core Network Nodes to enable alerting and improve visibility of network health.",
         "Fixed a production Minio database to support a retention policy when faced with storage issues, resulting in over 600GB of space savings.",
-        "Spearheaded the development of an automatic proxy tool to enable remote engineers efficient access to lab elements that were previously unreachable.",
+        "Led the migration of an enterprise Gitlab instance through ArgoCD, resulting in enhanced system stability and simpler maintenance.",
+        "Automated the truncation of system logging to reduce storage consumption on Kubernetes nodes by over 30% when faced with critical disk issues.",
+        "Spearheaded the development of an automatic proxy tool to enable remote engineers efficient access to lab elements that were previously unreachable, resulting in increased productivity.",
       ],
-      skills: [
-        "Kubernetes",
-        "ArgoCD",
-        "Rancher",
-        "Gitlab CI/CD",
-        "Harbor",
-        "Ansible",
-        "YAML",
-        "Python",
-        "Grafana",
-        "Linux",
-        "Jira",
-        "Confluence",
-      ],
+      skills: ["React", "JavaScript", "Rancher", "YAML", "Python", "Jira", "Confluence", "Ansible Playbooks", "APIs"],
     },
     {
       employmentPeriod: "July 2021 - December 2021",
@@ -134,7 +123,7 @@ const Experience = () => {
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-      <div className="space-y-12">
+      <div className="space-y-12 shadow-lg">
         {companyExperiences.map((companyExperience, index) => (
           <CompanyExperience key={index} {...companyExperience} />
         ))}

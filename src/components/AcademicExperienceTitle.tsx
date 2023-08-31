@@ -33,7 +33,7 @@ const AcademicExperienceTitle = () => {
       </h2>
       <div className="md:mb-6 md:border-b-2 md:border-white"></div>
       <p className="text-xl font-bold text-white md:text-2xl">
-        My Education and Projects
+        My Academic Experiences and Projects
       </p>
     </motion.div>
   );

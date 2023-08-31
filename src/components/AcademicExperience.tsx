@@ -27,7 +27,7 @@ const AcademicExperience = () => {
         "Bachelor of Software Engineering (Honours) Diploma in Professional Engineering Practice",
       year: "2020 - Present",
       achievements: ["Dean's List, 2022", "Dean's List, 2023"],
-      involvement: ["UTS Peer Tutoring", "UTS Programming Society"],
+      involvement: ["UTS Peer Tutoring", "UTS Programming Society", "3rd Place in UTS AI Hackathon, 2023)"],
     },
     {
       type: "Project",
@@ -72,7 +72,7 @@ const AcademicExperience = () => {
 
   return (
     <div className="m-8">
-      <Box height="350px">
+      <Box height="365px">
         <Paper elevation={3} className="p-5" style={{ height: "100%" }}>
           {activeExperience.type === "University Info" ? (
             <>

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { Paper, Typography, Button, Box, Link } from "@mui/material";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { motion } from "framer-motion"; // Import motion from framer-motion
 
 interface AcademicExperience {
   type: string;
@@ -18,11 +17,6 @@ interface AcademicExperience {
 }
 
 const AcademicExperience = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
-
   const [activeStep, setActiveStep] = useState(0);
 
   const academicExperiences: AcademicExperience[] = [
@@ -77,13 +71,7 @@ const AcademicExperience = () => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 0 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.8 }}
-      ref={ref}
-    >
-      <div ref={ref} className="m-8">
+      <div className="m-8">
         <Box height="350px">
           <Paper elevation={3} className="p-5" style={{ height: "100%" }}>
             {activeExperience.type === "University Info" ? (
@@ -216,7 +204,6 @@ const AcademicExperience = () => {
           }
         `}</style>
       </div>
-    </motion.div>
   );
 };
 

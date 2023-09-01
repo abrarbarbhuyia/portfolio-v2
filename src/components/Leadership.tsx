@@ -15,9 +15,6 @@ import {
 const Leadership = () => {
   return (
     <div className="m-8">
-      <Typography variant="h4" className="mb-6 text-xl font-bold">
-        Leadership
-      </Typography>
       <Paper elevation={3} className="p-4">
         <TableContainer>
           <Table>

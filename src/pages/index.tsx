@@ -1,7 +1,5 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
 import Header from "../components/Header"
 import Experience from "../components/Experience"
 import ExperienceTitle from "~/components/ExperienceTitle";
@@ -11,6 +9,8 @@ import SkillsTitle from "~/components/SkillsTitle";
 import Skills from "~/components/Skills";
 import LeadershipTitle from "~/components/LeadershipTitle";
 import Leadership from "~/components/Leadership";
+import TeamworkTitle from "~/components/TeamworkTitle";
+import Teamwork from "~/components/Teamwork";
 
 const Home: NextPage = () => {
   return (
@@ -29,6 +29,8 @@ const Home: NextPage = () => {
           <AcademicExperience />
           <LeadershipTitle />
           <Leadership />
+          <TeamworkTitle />
+          <Teamwork />
           <SkillsTitle />
           <Skills />
         </div>

@@ -13,6 +13,8 @@ import TeamworkTitle from "../components/TeamworkTitle";
 import Teamwork from "../components/Teamwork";
 import SkillsTitle from "../components/SkillsTitle";
 import Skills from "../components/Skills";
+import ResumeTitle from "~/components/ResumeTitle";
+import Resume from "~/components/Resume";
 
 const Home: NextPage = () => {
   return (
@@ -23,7 +25,6 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-screen justify-center bg-metal">
-        {/* Include the Sidebar component */}
         <Sidebar />
         <div className="mx-auto flex h-full max-w-7xl flex-row-reverse sm:flex-col justify-center px-4 text-white">
           <Header />
@@ -37,6 +38,8 @@ const Home: NextPage = () => {
           <Teamwork />
           <SkillsTitle />
           <Skills />
+          <ResumeTitle />
+          <Resume />
         </div>
       </main>
     </>

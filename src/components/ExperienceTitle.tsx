@@ -27,6 +27,7 @@ const ExperienceTitle = () => {
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       ref={ref}
+      id="career"
     >
       <h2 className="mb-2 text-3xl font-bold text-yellow-300 md:text-5xl">
         My Career

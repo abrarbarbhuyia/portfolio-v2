@@ -27,6 +27,7 @@ const SkillsTitle = () => {
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       ref={ref}
+      id="skills"
     >
       <h2 className="mb-2 text-3xl font-bold text-yellow-300 md:text-5xl">
         Skills

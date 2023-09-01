@@ -9,6 +9,8 @@ import AcademicExperienceTitle from "~/components/AcademicExperienceTitle";
 import AcademicExperience from "~/components/AcademicExperience";
 import SkillsTitle from "~/components/SkillsTitle";
 import Skills from "~/components/Skills";
+import LeadershipTitle from "~/components/LeadershipTitle";
+import Leadership from "~/components/Leadership";
 
 const Home: NextPage = () => {
   return (
@@ -25,6 +27,8 @@ const Home: NextPage = () => {
           <Experience />
           <AcademicExperienceTitle />
           <AcademicExperience />
+          <LeadershipTitle />
+          <Leadership />
           <SkillsTitle />
           <Skills />
         </div>

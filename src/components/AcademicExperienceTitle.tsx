@@ -37,7 +37,7 @@ const AcademicExperienceTitle = () => {
         My Academic Experiences and Projects
       </p>
       <p className="text-white mt-4">
-        Through my Academic Experience and Projects, I've had the chance to learn and apply my skills to realistic projects. By building project from scratch, I know how to prioritise the needs of stakeholders and how to deliver a completed product in a timely manner. These skills allow me to be a valuable asset in any company, as I can apply my technical skills while having a business understanding of the project I am working on. The value I provide to a company is my ability to learn and adapt to new technologies and environments, and my ability to communicate with stakeholders and other team members.
+        Through my Academic Experience and Projects, I&apos;ve had the chance to learn and apply my skills to realistic projects. By building project from scratch, I know how to prioritise the needs of stakeholders and how to deliver a completed product in a timely manner. These skills allow me to be a valuable asset in any company, as I can apply my technical skills while having a business understanding of the project I am working on. The value I provide to a company is my ability to learn and adapt to new technologies and environments, and my ability to communicate with stakeholders and other team members.
       </p>
     </motion.div>
   );

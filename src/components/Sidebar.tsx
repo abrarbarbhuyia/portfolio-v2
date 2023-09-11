@@ -23,6 +23,9 @@ const Sidebar = () => {
         <ListItem button component="a" href="#skills">
           <ListItemText primary="Skills" />
         </ListItem>
+        <ListItem button component="a" href="#resume">
+          <ListItemText primary="Resume" />
+        </ListItem>
       </List>
     </nav>
   );

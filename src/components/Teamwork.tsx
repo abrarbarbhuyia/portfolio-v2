@@ -56,6 +56,15 @@ const Teamwork = () => {
                 </TableCell>
               </TableRow>
             </TableBody>
+            <TableBody>
+              <TableRow>
+                <TableCell>Fixing a bug in a live environment</TableCell>
+                <TableCell>Professional Experience</TableCell>
+                <TableCell>
+                  During my internship at Optus, I was tasked to work with the team to fix a critical production environment bug. I demonstrated leadership skills by taking the initiative  to lead the team on fixing the issue. I broke down the task by delegating debugging efforts to each team member. I also took the lead on communicating with the client to ensure they were kept up to date with the progress of the fix. As a result of my efforts, the bug was fixed and the multiple teams that were affected by the issue were able to complete their projects.
+                </TableCell>
+              </TableRow>
+            </TableBody>
           </Table>
         </TableContainer>
       </Paper>

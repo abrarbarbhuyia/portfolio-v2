@@ -24,6 +24,9 @@ const Header = () => {
             I have a strong focus to deliver high-quality code and robust applications
             that exceed expectations.
           </div>
+          <div className="text-s mt-6 leading-8 md:text-lg">
+          I am seeking a full-time graduate position in Software Engineering, where I can employ my skills to contribute to a fast-paced working environment. I am motivated to use my skills to provide advanced and efficient Software solutions.
+          </div>
         </div>
       </div>
       <div className="md:ml -mb-5 flex flex-col items-center justify-center md:mb-0">

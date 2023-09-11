@@ -13,7 +13,7 @@ const Resume = () => {
   };
 
   return (
-    <div className="my-4 self-center text-center" id="resume">
+    <div className="mt-4 self-center text-center mb-20" id="resume">
       <IconButton
         onClick={handleDownloadResume}
         color="primary"

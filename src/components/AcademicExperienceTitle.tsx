@@ -22,7 +22,7 @@ const AcademicExperienceTitle = () => {
 
   return (
     <motion.div
-      className="text-center md:text-left"
+      className="text-center md:text-left mt-12"
       variants={titleVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}

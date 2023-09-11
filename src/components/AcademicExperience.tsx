@@ -14,6 +14,7 @@ interface AcademicExperience {
   description?: string;
   technologies?: string[];
   githubLink?: string;
+  image?: string; // New image property for each academic experience
 }
 
 const AcademicExperience = () => {
@@ -27,23 +28,30 @@ const AcademicExperience = () => {
         "Bachelor of Software Engineering (Honours) Diploma in Professional Engineering Practice",
       year: "2020 - Present",
       achievements: ["Dean's List, 2022", "Dean's List, 2023"],
-      involvement: ["UTS Peer Tutoring", "UTS Programming Society", "3rd Place in UTS AI Hackathon, 2023)"],
+      involvement: [
+        "UTS Peer Tutoring",
+        "UTS Programming Society",
+        "3rd Place in UTS AI Hackathon, 2023)",
+      ],
+      image: "/images/utslogo.png", // UTS logo image path
     },
     {
       type: "Project",
       title: "PacStudent",
       description:
-        "A classic pacman clone, with handmade sprites and animation",
+        "I designed and developed a Pac-Man clone using the Unity game engine. All the relevant resources such as sprites, animations, and artwork were created by me. The game features C# scripts that handle a variety of events, such as collisions, movement, and the point scoring system. The game was implemented in increments, allowing me to test and debug the game as it was developed.",
       technologies: ["Unity", "C#"],
       githubLink: "https://github.com/abrarbarbhuyia/pacman",
+      image: "/images/pacman.png", // Pac-Man image path
     },
     {
       type: "Project",
       title: "AI Proctor Tool",
       description:
-        "An AI-based proctoring tool for online exams, with face tracking and event detection.",
-      technologies: ["TensorFlow", "Python", "MongoDB", "Machine Learning"],
+        "I worked in a team where I contributed to an AI Proctoring platform. The platform was designed to detect and flag students that performed academic misconduct during exam sessions. The project was full-stack and was developed using the MERN stack. I was responsible for implementing the live exam sessions, including the backend and frontend of how students enter the exam environment.",
+      technologies: ["TensorFlow", "Python", "Machine Learning"],
       githubLink: "https://github.com/ProgKorn/41127-Software-Design-Studio",
+      image: "/images/tensorflow.png", // TensorFlow logo image path
     },
   ];
 
@@ -68,12 +76,14 @@ const AcademicExperience = () => {
     description: "",
     technologies: [],
     githubLink: "",
+    image: "/images/utslogo.png", // Default image path
   };
 
   return (
     <div className="m-8">
-      <Box height="365px">
-        <Paper elevation={3} className="p-5" style={{ height: "100%" }}>
+      <Box display="flex" height="365px">
+        {/* Text Section */}
+        <Paper elevation={3} className="p-5" style={{ flex: 2 }}>
           {activeExperience.type === "University Info" ? (
             <>
               <p className="text-lg font-bold text-gray-900 md:text-xl">
@@ -154,6 +164,15 @@ const AcademicExperience = () => {
             </div>
           )}
         </Paper>
+
+        {/* Image Section with padding and rounded corners */}
+        <div style={{ flex: 1, padding: "16px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+          <img
+            src={activeExperience.image || "/images/utslogo.png"} // Use the image specified in the active experience, or default to UTS logo
+            alt="Project Screenshot"
+            style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "8px" }}
+          />
+        </div>
       </Box>
       <div className="custom-carousel-buttons">
         <Button

@@ -36,6 +36,9 @@ const ExperienceTitle = () => {
       <p className="text-xl font-bold text-white md:text-2xl">
         Professional experience and projects in the Industry
       </p>
+      <p className="text-white mt-4">
+        I’ve had a plethora of experience in Software Engineering, where I’ve gained technical skills around Full-Stack Development and DevOps Engineering. I bring a variety of skills around to a company’s technical team. My problem-solving skills are evident in my experience, with resolving critical issues and implementing new automation to improve current systems. I have leadership and communication skills that allow me to streamline a workflow to success, and my time-management skills allow me to be able to handle complex or large projects. Overall, my skills and dedication to keep learning new approaches to things allows me to be a valuable asset in any company.
+      </p>
     </motion.div>
   );
 };

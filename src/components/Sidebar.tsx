@@ -9,7 +9,7 @@ const Sidebar = () => {
           <ListItemText primary="Home" />
         </ListItem>
         <ListItem button component="a" href="#career">
-          <ListItemText primary="Career" />
+          <ListItemText primary="Professional Experience" />
         </ListItem>
         <ListItem button component="a" href="#academic-experience">
           <ListItemText primary="Academic Experience" />

@@ -15,6 +15,8 @@ import SkillsTitle from "../components/SkillsTitle";
 import Skills from "../components/Skills";
 import ResumeTitle from "~/components/ResumeTitle";
 import Resume from "~/components/Resume";
+import AboutTitle from "~/components/AboutTitle";
+import About from "~/components/About";
 
 const Home: NextPage = () => {
   return (
@@ -28,6 +30,10 @@ const Home: NextPage = () => {
         <Sidebar />
         <div className="mx-auto flex h-full max-w-7xl flex-row-reverse sm:flex-col justify-center px-4 text-white">
           <Header />
+          <AboutTitle/>
+          <About />
+          <SkillsTitle />
+          <Skills />
           <ExperienceTitle />
           <Experience />
           <AcademicExperienceTitle />
@@ -36,8 +42,6 @@ const Home: NextPage = () => {
           <Leadership />
           <TeamworkTitle />
           <Teamwork />
-          <SkillsTitle />
-          <Skills />
           <ResumeTitle />
           <Resume />
         </div>

@@ -45,7 +45,7 @@ const ExperienceTitle = () => {
         I bring a variety of skills around to a company’s technical team. My
         problem-solving skills are evident in my experience, which provided me
         the critical thinking, time management, communication, leadership and
-        other EA competencies needed to be able to handle complex or large
+        other competencies needed to be able to handle complex or large
         projects.
       </p>
       <p className="mt-4 text-white">

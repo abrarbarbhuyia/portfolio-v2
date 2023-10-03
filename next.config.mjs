@@ -18,5 +18,9 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+
+  images: {
+    domains: ['i.pinimg.com'], // Add your image domains here
+  },
 };
 export default config;

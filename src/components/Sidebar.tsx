@@ -8,6 +8,12 @@ const Sidebar = () => {
         <ListItem button component="a" href="#home">
           <ListItemText primary="Home" />
         </ListItem>
+        <ListItem button component="a" href="#aboutme">
+          <ListItemText primary="About Me" />
+        </ListItem>
+        <ListItem button component="a" href="#skills">
+          <ListItemText primary="Professional Capabilities" />
+        </ListItem>
         <ListItem button component="a" href="#career">
           <ListItemText primary="Professional Experience" />
         </ListItem>
@@ -19,9 +25,6 @@ const Sidebar = () => {
         </ListItem>
         <ListItem button component="a" href="#teamwork">
           <ListItemText primary="Teamwork" />
-        </ListItem>
-        <ListItem button component="a" href="#skills">
-          <ListItemText primary="Skills" />
         </ListItem>
         <ListItem button component="a" href="#resume">
           <ListItemText primary="Resume" />

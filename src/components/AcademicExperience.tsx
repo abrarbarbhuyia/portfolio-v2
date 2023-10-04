@@ -29,7 +29,7 @@ const AcademicExperience = () => {
             </p>
             <ul className="mt-2 list-disc space-y-2 text-sm font-bold text-slate-200 md:pl-6 md:text-base">
               <li className="ml-4">
-                Received the Dean&apos;s List award in 2022 and 2023
+                Received the Dean's List award in 2022 and 2023
               </li>
               <li className="ml-4">
                 Achieved a distinction Weighted Average Mark (WAM) throughout my degree
@@ -65,22 +65,150 @@ const AcademicExperience = () => {
       <Box display="flex" height="470px" className="mb-6">
         {/* Text Section */}
         <Paper elevation={3} className="p-5" style={{ flex: 2 }}>
-          {/* Rest of your content */}
+          <div>
+            <p className="text-lg font-bold text-gray-900 md:text-xl">
+              Pacman Remake
+            </p>
+            <div className="text-sm font-semibold text-gray-500 md:mt-0.5 md:text-base">
+              Role Assumed: Software Engineer
+            </div>
+            <p className="mb-2 mt-2">
+              In my Introduction to Games Development subject, I undertook the
+              task of recreating Pac-man with my own twist. As a developer using
+              Unity, I had full control over the game&apos;s design and
+              implementation:
+            </p>
+            <ul className="list-disc space-y-2 text-sm text-slate-800 md:pl-6 md:text-base">
+              <li>
+                From scratch, created all the relevant resources, including
+                sprites, animations, and artwork.
+              </li>
+              <li>
+                Implemented C# scripts to handle various game events, such as
+                collisions, movement, and the point scoring system.
+              </li>
+              <li>
+                Developed the game incrementally, allowing for testing and
+                debugging throughout the development process.
+              </li>
+            </ul>
+            <p className="text-lg font-bold text-gray-900">
+              Technologies Used:
+            </p>
+            <ul className="mt-2 list-disc space-y-2 text-sm text-gray-900 md:pl-6 md:text-base">
+              <li className="ml-4">Unity</li>
+              <li className="ml-4">C#</li>
+            </ul>
+
+            <div className="mt-4">
+              <p className="text-lg font-bold text-gray-900">GitHub Link:</p>
+              <Link
+                href="https://github.com/abrarbarbhuyia/pacman"
+                target="_blank"
+                rel="noopener"
+                className="text-blue-500"
+              >
+                https://github.com/abrarbarbhuyia/pacman
+              </Link>
+            </div>
+          </div>
         </Paper>
 
         {/* Image Section with padding and rounded corners */}
-        {/* Rest of your content */}
+        <div
+          style={{
+            flex: 1,
+            padding: "16px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src="/images/pacman.png"
+            alt="Project Screenshot"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              borderRadius: "8px",
+            }}
+          />
+        </div>
       </Box>
 
       {/* Academic Experience 3 */}
-      <Box display="flex" height="465px" className="mb-6">
+      <Box display="flex" height="465ox" className="mb-6">
         {/* Text Section */}
         <Paper elevation={3} className="p-5" style={{ flex: 2 }}>
-          {/* Rest of your content */}
+          <div>
+            <p className="text-lg font-bold text-gray-900 md:text-xl">
+              AI Proctor Tool
+            </p>
+            <div className="text-sm font-semibold text-gray-500 md:mt-0.5 md:text-base">
+              Role Assumed: Software Engineer
+            </div>
+            <p>
+              I worked in a team where I contributed to an innovative AI
+              Proctoring platform, which was designed to detect and flag
+              students that performed academic misconduct during exam sessions.
+              As a Software Engineer, I:
+              <ul className="list-disc space-y-2 text-sm text-slate-800 md:pl-6 md:text-base">
+                <li>
+                  Developed a terms and conditions form using the React
+                  framework. This allowed students to have a clear understanding
+                  of exam rules and the privacy policy.
+                </li>
+                <li>
+                  Created live exam sessions in the database, which allowed
+                  teachers to interact with students during the exam, to provide
+                  warnings of misconduct.
+                </li>
+              </ul>
+            </p>
+            <p className="text-lg font-bold text-gray-900">
+              Technologies Used:
+            </p>
+            <ul className="mt-2 list-disc space-y-2 text-sm text-gray-900 md:pl-6 md:text-base">
+              <li className="ml-4">TensorFlow</li>
+              <li className="ml-4">Python</li>
+              <li className="ml-4">Machine Learning</li>
+            </ul>
+            <div className="mt-4">
+              <p className="text-lg font-bold text-gray-900">GitHub Link:</p>
+              <Link
+                href="https://github.com/ProgKorn/41127-Software-Design-Studio"
+                target="_blank"
+                rel="noopener"
+                className="text-blue-500"
+              >
+                https://github.com/ProgKorn/41127-Software-Design-Studio
+              </Link>
+            </div>
+          </div>
         </Paper>
 
         {/* Image Section with padding and rounded corners */}
-        {/* Rest of your content */}
+        <div
+          style={{
+            flex: 1,
+            padding: "16px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src="/images/tensorflow.png"
+            alt="Project Screenshot"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              borderRadius: "8px",
+            }}
+          />
+        </div>
       </Box>
     </div>
   );

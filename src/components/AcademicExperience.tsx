@@ -29,7 +29,7 @@ const AcademicExperience = () => {
             </p>
             <ul className="mt-2 list-disc space-y-2 text-sm font-bold text-slate-200 md:pl-6 md:text-base">
               <li className="ml-4">
-                Received the Dean's List award in 2022 and 2023
+                Received the Dean&apos;s List award in 2022 and 2023
               </li>
               <li className="ml-4">
                 Achieved a distinction Weighted Average Mark (WAM) throughout my degree

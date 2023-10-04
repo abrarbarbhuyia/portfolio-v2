@@ -7,7 +7,7 @@ const AcademicExperience = () => {
       {/* Academic Experience 1 */}
       <Box display="flex" height="365px" className="mb-6">
         {/* Text Section */}
-        <Paper elevation={3} className="bg-blue-600 p-5" style={{ flex: 2 }}>
+        <Paper elevation={3} className="p-5" style={{ backgroundColor: "#2564eb", flex: 2 }}>
           <p className="text-lg font-bold text-white md:text-xl">
             University of Technology Sydney
           </p>

@@ -16,6 +16,17 @@ const About = () => {
             height={267}
             className="mx-auto rounded-lg"
           />
+          <p className="mt-2 text-center text-sm text-gray-500">
+            Image Source:{" "}
+            <a
+              href="https://www.pinterest.com.au/pin/156922368238800635/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 underline"
+            >
+              Pinterest
+            </a>
+          </p>
         </div>
         <p className="text-black">
           Ever since I was little, I was curious about the interaction between
@@ -44,13 +55,13 @@ const About = () => {
           </p>
           <ul className="ml-6 list-disc">
             <li className="text-black">
-              <li className="text-black">
-                <strong>Growth:</strong> I want to be constantly learning new
-                things and trying new approaches throughout my university and
-                professional career. I believe having this{" "}
-                <strong>personal commitment</strong> will allow me to provide
-                great value to each organization I work with.
-              </li>
+              <strong>Growth:</strong> I want to be constantly learning new
+              things and trying new approaches throughout my university and
+              professional career. I believe having this{" "}
+              <strong>personal commitment</strong> will allow me to provide
+              great value to each organization I work with.
+            </li>
+            <li className="text-black">
               <strong>Technical Skills:</strong> I want to expand on my
               technical skills so that I can gain{" "}
               <strong>advanced engineering knowledge</strong>. By gaining this

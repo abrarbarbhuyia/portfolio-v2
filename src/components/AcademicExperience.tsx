@@ -1,205 +1,217 @@
-import React, { useState } from "react";
-import { useInView } from "react-intersection-observer";
-import { Paper, Button, Box, Link } from "@mui/material";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-
-interface AcademicExperience {
-  type: string;
-  university?: string;
-  degree?: string;
-  year?: string;
-  achievements?: string[];
-  involvement?: string[];
-  title?: string;
-  description?: string;
-  technologies?: string[];
-  githubLink?: string;
-  image?: string; // New image property for each academic experience
-}
+import React from "react";
+import { Paper, Box, Link } from "@mui/material";
 
 const AcademicExperience = () => {
-  const [activeStep, setActiveStep] = useState(0);
-
-  const academicExperiences: AcademicExperience[] = [
-    {
-      type: "University Info",
-      university: "University of Technology Sydney",
-      degree:
-        "Bachelor of Software Engineering (Honours) Diploma in Professional Engineering Practice",
-      year: "2020 - Present",
-      achievements: ["Dean's List, 2022", "Dean's List, 2023"],
-      involvement: [
-        "UTS Peer Tutoring",
-        "UTS Programming Society",
-        "3rd Place in UTS AI Hackathon, 2023)",
-      ],
-      image: "/images/utslogo.png", // UTS logo image path
-    },
-    {
-      type: "Project",
-      title: "PacStudent",
-      description:
-        "I designed and developed a Pac-Man clone using the Unity game engine. All the relevant resources such as sprites, animations, and artwork were created by me. The game features C# scripts that handle a variety of events, such as collisions, movement, and the point scoring system. The game was implemented in increments, allowing me to test and debug the game as it was developed.",
-      technologies: ["Unity", "C#"],
-      githubLink: "https://github.com/abrarbarbhuyia/pacman",
-      image: "/images/pacman.png", // Pac-Man image path
-    },
-    {
-      type: "Project",
-      title: "AI Proctor Tool",
-      description:
-        "I worked in a team where I contributed to an AI Proctoring platform. The platform was designed to detect and flag students that performed academic misconduct during exam sessions. The project was full-stack and was developed using the MERN stack. I was responsible for implementing the live exam sessions, including the backend and frontend of how students enter the exam environment.",
-      technologies: ["TensorFlow", "Python", "Machine Learning"],
-      githubLink: "https://github.com/ProgKorn/41127-Software-Design-Studio",
-      image: "/images/tensorflow.png", // TensorFlow logo image path
-    },
-  ];
-
-  const goToPrevStep = () => {
-    setActiveStep((prevStep) => prevStep - 1);
-  };
-
-  const goToNextStep = () => {
-    setActiveStep((prevStep) => prevStep + 1);
-  };
-
-  const activeExperience: AcademicExperience = academicExperiences[
-    activeStep
-  ] || {
-    type: "",
-    university: "",
-    degree: "",
-    year: "",
-    achievements: [],
-    involvement: [],
-    title: "",
-    description: "",
-    technologies: [],
-    githubLink: "",
-    image: "/images/utslogo.png", // Default image path
-  };
-
   return (
     <div className="m-8">
-      <Box display="flex" height="365px">
+      {/* Academic Experience 1 */}
+      <Box display="flex" height="365px" className="mb-6">
         {/* Text Section */}
-        <Paper elevation={3} className="p-5" style={{ flex: 2 }}>
-          {activeExperience.type === "University Info" ? (
-            <>
-              <p className="text-lg font-bold text-gray-900 md:text-xl">
-                {activeExperience.university}
-              </p>
-              <div className="text-sm font-semibold text-gray-500 md:mt-0.5 md:text-base">
-                {activeExperience.degree}
-              </div>
-              <div className="text-sm text-gray-500 md:mt-0.5 md:text-base">
-                {activeExperience.year}
-              </div>
-              {activeExperience.achievements &&
-                activeExperience.achievements.length > 0 && (
-                  <div className="mt-4">
-                    <p className="text-lg font-bold text-gray-900">
-                      Achievements:
-                    </p>
-                    <ul className="mt-2 list-disc space-y-2 text-sm text-gray-900 md:pl-6 md:text-base">
-                      {activeExperience.achievements.map(
-                        (achievement, index) => (
-                          <li key={index} className="ml-4">
-                            {achievement}
-                          </li>
-                        )
-                      )}
-                    </ul>
-                  </div>
-                )}
-              {activeExperience.involvement &&
-                activeExperience.involvement.length > 0 && (
-                  <div className="mt-4">
-                    <p className="text-lg font-bold text-gray-900">
-                      Involvement:
-                    </p>
-                    <ul className="mt-2 list-disc space-y-2 text-sm text-gray-900 md:pl-6 md:text-base">
-                      {activeExperience.involvement.map(
-                        (involvement, index) => (
-                          <li key={index} className="ml-4">
-                            {involvement}
-                          </li>
-                        )
-                      )}
-                    </ul>
-                  </div>
-                )}
-            </>
-          ) : (
-            <div>
-              <p className="text-lg font-bold text-gray-900 md:text-xl">
-                {activeExperience.title}
-              </p>
-              <p>{activeExperience.description}</p>
-              <p className="text-lg font-bold text-gray-900">
-                Technologies Used:
-              </p>
-              <ul className="mt-2 list-disc space-y-2 text-sm text-gray-900 md:pl-6 md:text-base">
-                {activeExperience.technologies?.map((technology, index) => (
-                  <li key={index} className="ml-4">
-                    {technology}
-                  </li>
-                ))}
-              </ul>
-              {activeExperience.githubLink && (
-                <div className="mt-4">
-                  <p className="text-lg font-bold text-gray-900">
-                    GitHub Link:
-                  </p>
-                  <Link
-                    href={activeExperience.githubLink}
-                    target="_blank"
-                    rel="noopener"
-                    className="text-blue-500"
-                  >
-                    {activeExperience.githubLink}
-                  </Link>
-                </div>
-              )}
-            </div>
-          )}
+        <Paper elevation={3} className="bg-blue-600 p-5" style={{ flex: 2 }}>
+          <p className="text-lg font-bold text-white md:text-xl">
+            University of Technology Sydney
+          </p>
+          <div className="text-sm font-semibold text-slate-300 md:mt-0.5 md:text-base">
+            Bachelor of Software Engineering (Honours) Diploma in Professional
+            Engineering Practice
+          </div>
+          <div className="text-sm text-slate-300 md:mt-0.5 md:text-base">
+            2020 - 2024 (Expected)
+          </div>
+          <div className="mt-4">
+            <p className="text-lg font-bold text-white">
+              Achievements and awards:
+            </p>
+            <p className="text-slate-200">
+              I am a highly motivated student that aims to learn as much as
+              possible while achieving the best results. Throughout my four
+              years of study, I have been able to exceed academically
+              consistently. Examples of my achievement can be seen below:
+            </p>
+            <ul className="mt-2 list-disc space-y-2 text-sm font-bold text-slate-200 md:pl-6 md:text-base">
+              <li className="ml-4">
+                Received the Dean&apos;s List award in 2022 and 2023
+              </li>
+              <li className="ml-4">
+                Achieved a distinction Weighted Average Mark (WAM) throughout my
+                degree
+              </li>
+            </ul>
+          </div>
         </Paper>
 
         {/* Image Section with padding and rounded corners */}
-        <div style={{ flex: 1, padding: "16px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <div
+          style={{
+            flex: 1,
+            padding: "16px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <img
-            src={activeExperience.image || "/images/utslogo.png"} // Use the image specified in the active experience, or default to UTS logo
+            src="https://scontent.fsyd3-1.fna.fbcdn.net/v/t39.30808-6/327273038_876860666888203_1192518971027569268_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=ezdxxdtVdacAX_mI1JS&_nc_ht=scontent.fsyd3-1.fna&oh=00_AfDMB4wVUYLB8AW_AF8n5UZgbsaIkN2CnNJMzs2Yfeq8MA&oe=6521C330"
             alt="Project Screenshot"
-            style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "8px" }}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              borderRadius: "8px",
+            }}
           />
         </div>
       </Box>
-      <div className="custom-carousel-buttons">
-        <Button
-          color="primary"
-          disabled={activeStep === 0}
-          onClick={goToPrevStep}
-          startIcon={<FaArrowLeft />}
+
+      {/* Academic Experience 2 */}
+      <Box display="flex" height="470px" className="mb-6">
+        {/* Text Section */}
+        <Paper elevation={3} className="p-5" style={{ flex: 2 }}>
+          <div>
+            <p className="text-lg font-bold text-gray-900 md:text-xl">
+              Pacman Remake
+            </p>
+            <div className="text-sm font-semibold text-gray-500 md:mt-0.5 md:text-base">
+              Role Assumed: Software Engineer
+            </div>
+            <p className="mb-2 mt-2">
+              In my Introduction to Games Development subject, I undertook the
+              task of recreating Pac-man with my own twist. As a developer using
+              Unity, I had full control over the game&apos;s design and
+              implementation:
+            </p>
+            <ul className="list-disc space-y-2 text-sm text-slate-800 md:pl-6 md:text-base">
+              <li>
+                From scratch, created all the relevant resources, including
+                sprites, animations, and artwork.
+              </li>
+              <li>
+                Implemented C# scripts to handle various game events, such as
+                collisions, movement, and the point scoring system.
+              </li>
+              <li>
+                Developed the game incrementally, allowing for testing and
+                debugging throughout the development process.
+              </li>
+            </ul>
+            <p className="text-lg font-bold text-gray-900">
+              Technologies Used:
+            </p>
+            <ul className="mt-2 list-disc space-y-2 text-sm text-gray-900 md:pl-6 md:text-base">
+              <li className="ml-4">Unity</li>
+              <li className="ml-4">C#</li>
+            </ul>
+
+            <div className="mt-4">
+              <p className="text-lg font-bold text-gray-900">GitHub Link:</p>
+              <Link
+                href="https://github.com/abrarbarbhuyia/pacman"
+                target="_blank"
+                rel="noopener"
+                className="text-blue-500"
+              >
+                https://github.com/abrarbarbhuyia/pacman
+              </Link>
+            </div>
+          </div>
+        </Paper>
+
+        {/* Image Section with padding and rounded corners */}
+        <div
+          style={{
+            flex: 1,
+            padding: "16px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
-          Previous
-        </Button>
-        <Button
-          color="primary"
-          disabled={activeStep === academicExperiences.length - 1}
-          onClick={goToNextStep}
-          endIcon={<FaArrowRight />}
+          <img
+            src="/images/pacman.png"
+            alt="Project Screenshot"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              borderRadius: "8px",
+            }}
+          />
+        </div>
+      </Box>
+
+      {/* Academic Experience 3 */}
+      <Box display="flex" height="465ox" className="mb-6">
+        {/* Text Section */}
+        <Paper elevation={3} className="p-5" style={{ flex: 2 }}>
+          <div>
+            <p className="text-lg font-bold text-gray-900 md:text-xl">
+              AI Proctor Tool
+            </p>
+            <div className="text-sm font-semibold text-gray-500 md:mt-0.5 md:text-base">
+              Role Assumed: Software Engineer
+            </div>
+            <p>
+              I worked in a team where I contributed to an innovative AI
+              Proctoring platform, which was designed to detect and flag
+              students that performed academic misconduct during exam sessions.
+              As a Software Engineer, I:
+              <ul className="list-disc space-y-2 text-sm text-slate-800 md:pl-6 md:text-base">
+                <li>
+                  Developed a terms and conditions form using the React
+                  framework. This allowed students to have a clear understanding
+                  of exam rules and the privacy policy.
+                </li>
+                <li>
+                  Created live exam sessions in the database, which allowed
+                  teachers to interact with students during the exam, to provide
+                  warnings of misconduct.
+                </li>
+              </ul>
+            </p>
+            <p className="text-lg font-bold text-gray-900">
+              Technologies Used:
+            </p>
+            <ul className="mt-2 list-disc space-y-2 text-sm text-gray-900 md:pl-6 md:text-base">
+              <li className="ml-4">TensorFlow</li>
+              <li className="ml-4">Python</li>
+              <li className="ml-4">Machine Learning</li>
+            </ul>
+            <div className="mt-4">
+              <p className="text-lg font-bold text-gray-900">GitHub Link:</p>
+              <Link
+                href="https://github.com/ProgKorn/41127-Software-Design-Studio"
+                target="_blank"
+                rel="noopener"
+                className="text-blue-500"
+              >
+                https://github.com/ProgKorn/41127-Software-Design-Studio
+              </Link>
+            </div>
+          </div>
+        </Paper>
+
+        {/* Image Section with padding and rounded corners */}
+        <div
+          style={{
+            flex: 1,
+            padding: "16px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
-          Next
-        </Button>
-      </div>
-      <style jsx>{`
-        .custom-carousel-buttons {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-top: 10px;
-        }
-      `}</style>
+          <img
+            src="/images/tensorflow.png"
+            alt="Project Screenshot"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              borderRadius: "8px",
+            }}
+          />
+        </div>
+      </Box>
     </div>
   );
 };

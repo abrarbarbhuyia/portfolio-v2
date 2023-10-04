@@ -24,7 +24,7 @@ const Sidebar = () => {
           <ListItemText primary="Leadership" />
         </ListItem>
         <ListItem button component="a" href="#teamwork">
-          <ListItemText primary="Teamwork" />
+          <ListItemText primary="Teamwork and Service" />
         </ListItem>
         <ListItem button component="a" href="#resume">
           <ListItemText primary="Resume" />

@@ -70,8 +70,8 @@ const Experience = () => {
               This can be shown in the following achievements:
             </p>
           </div>
-          <div className="mt-4 text-sm text-green-500 md:text-base border-t-2 border-b-2 border-green-500 p-4">
-            <div className="bg-gradient-to-b from-green-100 to-green-100 p-2 rounded">
+          <div className="mt-4 border-b-2 border-t-2 border-green-500 p-4 text-sm text-green-500 md:text-base">
+            <div className="rounded bg-gradient-to-b from-green-100 to-green-100 p-2">
               <p className="font-semibold">
                 Key Achievements{" "}
                 <span role="img" aria-label="star">
@@ -81,20 +81,25 @@ const Experience = () => {
             </div>
             <ul className="ml-4 list-disc space-y-2">
               <li className="text-black">
-                <strong>Spearheaded</strong> the upgrade of user interfaces to
-                be supported on mobile devices. As a result, the number of
-                mobile users on the platform increased by <strong>10%</strong>.
+                Fixed a production database to support a retention policy when
+                faced with storage issues, resulting in over{" "}
+                <strong>600GB of space savings</strong>. This reduced pressure
+                on the team&apos;s limited budget and allowed for more data to
+                be stored.
               </li>
               <li className="text-black">
-                Resolved a number of bugs in the front and back-ends of the
-                application, which allowed for smooth operation for customers
-                and <strong>demonstrations to investors</strong>.
+                Assigned to the development and maintenance of automation tools
+                to improve management of the Core Network. This{" "}
+                <strong>
+                  saved valuable hours spent on repetitive tasks by engineers
+                </strong>
+                , allowing focus on more important work.
               </li>
               <li className="text-black">
-                Redesigned the order confirmation page to support the sending of
-                confirmation emails. This improved{" "}
-                <strong>customer trust</strong> as they were able to receive
-                confirmation of their order as soon as its made.
+                <strong>Led</strong> the migration of an enterprise software
+                instance into a simplified version-management software. This{" "}
+                <strong>simplified the upgrade process</strong> executed by
+                external contractors.
               </li>
             </ul>
           </div>
@@ -161,8 +166,8 @@ const Experience = () => {
               Please view examples of this work in the achievements below:
             </p>
           </div>
-          <div className="mt-4 text-sm text-green-500 md:text-base border-t-2 border-b-2 border-green-500 p-4">
-            <div className="bg-gradient-to-b from-green-100 to-green-100 p-2 rounded">
+          <div className="mt-4 border-b-2 border-t-2 border-green-500 p-4 text-sm text-green-500 md:text-base">
+            <div className="rounded bg-gradient-to-b from-green-100 to-green-100 p-2">
               <p className="font-semibold">
                 Key Achievements{" "}
                 <span role="img" aria-label="star">
@@ -210,8 +215,6 @@ const Experience = () => {
       </div>
     </div>
   );
-  
-  
 };
 
 export default Experience;

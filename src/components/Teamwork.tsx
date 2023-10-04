@@ -1,4 +1,3 @@
-// teamwork.tsx
 import React from "react";
 import {
   Typography,
@@ -14,60 +13,66 @@ import {
 
 const Teamwork = () => {
   return (
-    <div className="m-8">
-      <Paper elevation={3} className="p-4">
-        <TableContainer>
-          <Table>
-            <TableHead>
-              <TableRow>
-                <TableCell style={{ minWidth: "150px" }}>
-                  <span role="img" aria-label="Team">
-                    👥 Team
-                  </span>
-                </TableCell>
-                <TableCell style={{ minWidth: "150px" }}>
-                  <span role="img" aria-label="Project">
-                    🚀 Project
-                  </span>
-                </TableCell>
-                <TableCell style={{ minWidth: "150px" }}>
-                  <span role="img" aria-label="Experience">
-                    📝 Experience
-                  </span>
-                </TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              <TableRow>
-                <TableCell>University Group Project</TableCell>
-                <TableCell>Creating a table booking app</TableCell>
-                <TableCell>
-                  As part of an assignment, we were tasked with making a
-                  full-stack table booking application. This involved creating
-                  the application from scratch and required intensive
-                  requirements gathering, and generation of user stores and use
-                  cases to help us understand the problem. After this we
-                  implemented an Agile methodology to help us manage the project
-                  and ensure we were on track to meet the deadline. We used a
-                  variety of tools to help us manage the project, including
-                  Trello, GitHub, and Discord. As a result we had a successful
-                  project that we presented to the class, it was also fully
-                  functional and met all the requirements.
-                </TableCell>
-              </TableRow>
-            </TableBody>
-            <TableBody>
-              <TableRow>
-                <TableCell>Fixing a bug in a live environment</TableCell>
-                <TableCell>Professional Experience</TableCell>
-                <TableCell>
-                  During my internship at Optus, I was tasked to work with the team to fix a critical production environment bug. I demonstrated leadership skills by taking the initiative  to lead the team on fixing the issue. I broke down the task by delegating debugging efforts to each team member. I also took the lead on communicating with the client to ensure they were kept up to date with the progress of the fix. As a result of my efforts, the bug was fixed and the multiple teams that were affected by the issue were able to complete their projects.
-                </TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </Paper>
+    <div className="mx-auto mt-8 max-w-4xl rounded-lg bg-white px-4 py-8 sm:px-6 lg:px-8">
+      <div className="space-y-6">
+        <h1 className="mb-4 border-b-2 border-yellow-300 pb-2 text-2xl font-extrabold text-gray-900">
+          Teamwork
+        </h1>
+        <p className="text-black">
+          I am a highly motivated team member, and I aim to have effective
+          communication to develop my collaboration skills when working in
+          different teams. By continually developing my communication and
+          collaboration skills, I can work effectively in teams.
+        </p>
+        <p className="text-black">
+          Some examples of teamwork I have exercised are:
+        </p>
+
+        <ul className="ml-0 list-disc space-y-2">
+          <h4 className="border-b-2 pb-2 text-xl font-semibold text-purple-600">
+            UTS AI Hackathon 2023 🤖
+          </h4>
+          <img
+            src="https://www.uts.edu.au/sites/default/files/styles/full_width_xlarge_2x/public/2023-04/FEIT-banner-Tech-Fest-v2-4000px.jpg?itok=zzlMyoYa"
+            alt="Teamwork Image"
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+            }}
+          />
+          <p className="text-black">
+            As a team member when attempting the UTS AI Hackathon, I always made
+            sure to share my ideas through effective communcation. By recording
+            meeting minutes, the team was able to have multiple different
+            approaches to the same probelm, which lead to our success.
+          </p>
+          <p className="text-black">Our success can be seen below:</p>
+          <div className="rounded bg-gradient-to-b from-purple-200 to-purple-100 p-2">
+            <p className="font-semibold text-purple-600">
+              Key Achievements{" "}
+              <span role="img" aria-label="star">
+                🏆
+              </span>
+            </p>
+          </div>
+          <div className="ml-4">
+            <li className="text-black">
+              Achieved third place and won a prize of $450 that was shared
+              across the team.
+            </li>
+            <li className="text-black">
+              Collaborated with the team to use KNIME to create an accurate
+              machine learning model that was able to predict equipment failure,
+              saving equipment costs.
+            </li>
+            <li className="text-black">
+              Collaborated effectively with the team using Canva to develop a
+              presentation that was able to impress the judges.
+            </li>
+          </div>
+          {/* Insert the image after the <h4> */}
+        </ul>
+      </div>
     </div>
   );
 };

@@ -36,9 +36,6 @@ const LeadershipTitle = () => {
       <p className="text-xl font-bold text-white md:text-2xl">
         Moments where I showed leadership
       </p>
-      <p className="text-white mt-4">
-        Through my work experience I have been placed in situations where I need to prove my leadership skills. I am able to provide leadership in high-stress situations, where the stakes are high and something needs to be completed. I also lead the conversation by providing input on processes that can be improved, and take ownership of the projects that I suggest. By employing these skills, I am able to guide and lead projects, which is a valuable element to any team.
-      </p>
     </motion.div>
   );
 };

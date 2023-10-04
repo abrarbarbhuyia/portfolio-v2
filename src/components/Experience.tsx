@@ -71,7 +71,7 @@ const Experience = () => {
             </p>
           </div>
           <div className="mt-4 border-b-2 border-t-2 border-green-500 p-4 text-sm text-green-500 md:text-base">
-            <div className="rounded bg-gradient-to-b from-green-100 to-green-100 p-2">
+            <div className="rounded bg-gradient-to-b from-green-200 to-green-100 p-2">
               <p className="font-semibold">
                 Key Achievements{" "}
                 <span role="img" aria-label="star">
@@ -167,7 +167,7 @@ const Experience = () => {
             </p>
           </div>
           <div className="mt-4 border-b-2 border-t-2 border-green-500 p-4 text-sm text-green-500 md:text-base">
-            <div className="rounded bg-gradient-to-b from-green-100 to-green-100 p-2">
+            <div className="rounded bg-gradient-to-b from-green-200 to-green-100 p-2">
               <p className="font-semibold">
                 Key Achievements{" "}
                 <span role="img" aria-label="star">

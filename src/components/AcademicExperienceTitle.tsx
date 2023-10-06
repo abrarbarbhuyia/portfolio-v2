@@ -30,11 +30,11 @@ const AcademicExperienceTitle = () => {
       id="academic-experience"
     >
       <h2 className="mb-2 text-3xl font-bold text-yellow-300 md:text-5xl">
-        Academic Experience
+        Academic Experience and projects
       </h2>
       <div className="md:mb-6 md:border-b-2 md:border-white"></div>
       <p className="text-xl font-bold text-white md:text-2xl">
-        My Academic Experiences and Projects
+       Experience in academia.
       </p>
       <p className="mt-4 text-white">
         Through my Academic Experience and Projects, I&apos;ve had the chance to

@@ -7,12 +7,17 @@ const AcademicExperience = () => {
       {/* Academic Experience 1 */}
       <Box display="flex" height="365px" className="mb-6">
         {/* Text Section */}
-        <Paper elevation={3} className="p-5" style={{ backgroundColor: "#2564eb", flex: 2 }}>
+        <Paper
+          elevation={3}
+          className="p-5"
+          style={{ backgroundColor: "#2564eb", flex: 2 }}
+        >
           <p className="text-lg font-bold text-white md:text-xl">
             University of Technology Sydney
           </p>
           <div className="text-sm font-semibold text-slate-300 md:mt-0.5 md:text-base">
-            Bachelor of Software Engineering (Honours) Diploma in Professional Engineering Practice
+            Bachelor of Software Engineering (Honours) Diploma in Professional
+            Engineering Practice
           </div>
           <div className="text-sm text-slate-300 md:mt-0.5 md:text-base">
             2020 - 2024 (Expected)
@@ -32,7 +37,8 @@ const AcademicExperience = () => {
                 Received the Dean&apos;s List award in 2022 and 2023
               </li>
               <li className="ml-4">
-                Achieved a distinction Weighted Average Mark (WAM) throughout my degree
+                Achieved a distinction Weighted Average Mark (WAM) throughout my
+                degree
               </li>
             </ul>
           </div>
@@ -62,7 +68,7 @@ const AcademicExperience = () => {
       </Box>
 
       {/* Academic Experience 2 */}
-      <Box display="flex" height="470px" className="mb-6">
+      <Box display="flex" height="495px" className="mb-6">
         {/* Text Section */}
         <Paper elevation={3} className="p-5" style={{ flex: 2 }}>
           <div>
@@ -78,18 +84,20 @@ const AcademicExperience = () => {
               Unity, I had full control over the game&apos;s design and
               implementation:
             </p>
-            <ul className="list-disc space-y-2 text-sm text-slate-800 md:pl-6 md:text-base">
+            <ul className="list-disc space-y-2 text-sm text-slate-800 md:pl-6 md:text-base mb-2">
               <li>
                 From scratch, created all the relevant resources, including
-                sprites, animations, and artwork.
+                sprites, animations, and artwork. This allowed players to
+                experience a pacman-like game with <strong>enjoyable graphics</strong>.
               </li>
               <li>
                 Implemented C# scripts to handle various game events, such as
-                collisions, movement, and the point scoring system.
+                collisions, movement, and the point scoring system. Allowing
+                players a <strong>sense of progression and achievement</strong>.
               </li>
               <li>
                 Developed the game incrementally, allowing for testing and
-                debugging throughout the development process.
+                debugging throughout the development process. This allowed for a <strong>refined and polished game</strong>.
               </li>
             </ul>
             <p className="text-lg font-bold text-gray-900">
@@ -153,16 +161,16 @@ const AcademicExperience = () => {
               Proctoring platform, which was designed to detect and flag
               students that performed academic misconduct during exam sessions.
               As a Software Engineer, I:
-              <ul className="list-disc space-y-2 text-sm text-slate-800 md:pl-6 md:text-base">
+              <ul className="list-disc space-y-2 text-sm text-slate-800 md:pl-6 md:text-base mb-2">
                 <li>
                   Developed a terms and conditions form using the React
-                  framework. This allowed students to have a clear understanding
-                  of exam rules and the privacy policy.
+                  framework. This allowed students to have a <strong>clear understanding
+                  of exam rules and the privacy policy</strong>.
                 </li>
                 <li>
                   Created live exam sessions in the database, which allowed
-                  teachers to interact with students during the exam, to provide
-                  warnings of misconduct.
+                  teachers to interact with students during the exam, to <strong>provide
+                  warnings of misconduct.</strong>
                 </li>
               </ul>
             </p>

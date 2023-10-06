@@ -73,7 +73,7 @@ const Leadership = () => {
 
         <ul className="ml-0 list-disc space-y-2">
           <h4 className="border-b-2 pb-2 text-xl font-semibold text-blue-600">
-            Uts Programming Society 💻
+            UTS Programming Society 💻
           </h4>
           <p className="text-black">
             As a general committee member in the UTS Programming Society, I
